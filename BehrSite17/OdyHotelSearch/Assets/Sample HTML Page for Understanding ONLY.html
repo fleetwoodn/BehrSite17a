@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Odysseus Search Forms - Test - Odysseus</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- 
+        script tag details:
+        1. be sure to change the src= URL to https://******/web/SearchForms/OFramework.js  -- where ****** is your domain setup with odysseus. Note, if the domain is not setup with Odysseus, it will not work.
+		2. ThemeURI - this tells our code where to load the core template from. This should be a relative path.
+		if you place the HTML file in the root directory, you should place the folder in that same directory. If you change the path of that folder, please update the path appropriately. 
+        3. this script tag should be on the top of the page, preferably inside the <head> element
+        -->
+        <script type="text/javascript" language="javascript" id="OFrameworkJS" ThemeURI="OdyResponsiveSearchForm-Blue-Hotel/" SkinID="default" src="http://demo64.odysol.com/web/SearchForms/OFramework.js" ></script>
+    </head>
+    <body>
+		<div id="HotelSearchForm"></div>
+    </body>
+</html>
+<!-- 
+script tag details:
+1. this script should be at the bottom of the page, towards the end
+2. must add proper siid
+-->
+<script language="javascript" type="text/javascript">
+    if (OFramework != null) {
+        OFramework.QSParams.Add("siid", "1"); // change this with your valid siid (odysseus generated ID for each website/affiliate - unique per site)
+        OFramework.QSParams.Add("referrer", "testing query string add"); // be sure to remove this or set the right value here - for  example only
+
+        oHForm = OFramework.HotelSearchForm(document.getElementById("HotelSearchForm"));
+        oHForm.Target = "_new"; //use this only if you want the search results to open in a different page
+    }
+</script>

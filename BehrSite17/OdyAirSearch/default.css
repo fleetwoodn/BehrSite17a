@@ -1,0 +1,247 @@
+.OFContainer,.OFContainer table,.OFContainer input,.OFContainer select,.OFContainer div{font-family:Segoe UI,Helvetica,Arial,sans-serif;font-size:12px}
+div.popup{display:none;position:absolute;background-color:white}
+.itineraryNumber{color:#08ABE6;font-size:28px;font-weight:bold}
+.searchFilterCount{color:#333333;font-size:12px;text-align:center}
+input.text{position:relative;border:solid 1px silver;cursor:default;outline:none}
+input.error{border:solid 1px firebrick}
+.OFContainer.select{position:relative;border:solid 1px silver;cursor:default;outline:none;padding:0}
+div.date{position:relative;cursor:default;outline:none;-moz-user-select:none;background-position:90% center;background-image:url(images/cal.png);background-repeat:no-repeat;overflow:hidden;white-space:nowrap;clip:auto;width:100px;padding:1px}
+div.dropdown{-moz-user-select:none;background-position:left;background-image:url(images/dropdown.png);background-repeat:no-repeat;clip:auto;cursor:default;height:29px;line-height:29px;padding-left:7px;outline:medium none;overflow:hidden;position:relative;white-space:nowrap;width:210px;margin:10px 2px 10px 5px}
+.search-box-he div.dropdown{background-image:url(images/dropdown_9.png)!important;background-position:right;padding-right:7px;padding-left:0!important;margin:3px 2px 10px 0 !important}
+.search-box-he label{padding-right:5px}
+div.list{overflow-y:auto;overflow-x:hidden;border:1px solid #c3c4c5}
+div.list_item{white-space:nowrap;cursor:default;font-size:13px;padding:4px 2px}
+div.list_item_hover{background-color:#87B5CA;color:#ffffff;white-space:nowrap;cursor:default;font-size:13px;padding:4px 2px}
+div span.highlight{font-weight:bold}
+/*overlay*/
+div.overlay{position:absolute;display:none;top:0;left:0;background-color:rgb(150,150,150);filter:alpha(opacity=70);opacity:.70;-moz-opacity:.70;-moz-user-select:none}
+.search-button{background:url(images/search-btn-bg.png) left top;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;border:1px solid #08abe6;color:#fff!important;cursor:pointer;font-weight:bold;float:left;margin:10px;padding:5px}
+
+/*Air Search Form Start */
+.airsearchform div.dropdown{line-height:17px;}
+.airsearchform input, .airsearchform div{color:#ffffff;}
+.OFtabcontainer{}
+dl dd{margin:0;padding:0;}
+.OFcontent{}
+.fromtosearch dd ,dd.pref-airlines{border:1px solid #BBBBBB;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;padding:5px;font-weight:bold;font-size:13px;margin-bottom:10px;float:left;margin-right:10px;min-width:270px;}
+.fromtosearch dd  .text,dd.pref-airlines .text{border:0px none!important;width:210px;padding:5px;background:#FFFFFF!important;}
+.calform{margin:0;}
+.calform dd{margin-bottom:10px;float:left;}
+.calform .calbox,.calform .allcombo{  border: 1px solid #BBBBBB;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;min-width: 135px;}
+.calform .allcombo{margin-left:8px;}
+.calform .calbox .date,.calform .allcombo .dropdown,.seatclass .dropdown{padding:10px;font-weight:bold;margin:0;width:auto;height:auto;}
+.airsearchform div.dropdown{background:url("images/sel-arrow.png") no-repeat 96% center transparent;}
+.airsearchform.he div.dropdown{background:url("images/sel-arrow9.png") no-repeat 6% center transparent;text-align:right;}
+.airsearchform .seatclass .dropdown{background-position:98% center;}
+.airsearchform.he .seatclass .dropdown{background-position:3% center;}
+div.date{background:url("images/cal.jpg") no-repeat 94% center transparent;}
+.airsearchform.he div.date {background-position: 4% center;text-align: right;}
+.calform .return-panel{margin-bottom:0px;}
+.calform .return-panel,.nextrow{float:left;margin-left:10px;}
+.return-panel dl,.check dl{margin:0;}
+.nomargin .allcombo{margin:0px!important;}
+.seatclass{border:1px solid #BBBBBB;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;min-width:280px;font-weight:bold;font-size:13px;margin-bottom:10px;float:left;}
+.check {}
+.he .check {float:right;margin-right:15px;}
+.chkoptions{margin-bottom:2px!important;float:left;}
+.he .chkoptions{float:right;}
+.chkoptions.cf {
+    clear: both;
+}
+.he .pref-airlines{text-align:right;}
+.ser-flight:hover { color:#fff;}
+.ser-flight { background:url(images/searchbtn-runner.png) repeat-x scroll #5A7F0C;display:inline-block; width:120px; height:32px; line-height:32px; display:inline-block; font-size:16px; color:#fff; text-decoration:none; padding:0 20px 0 12px; margin-right:2px;/* text-shadow:#377540 0 -1px;*/border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;padding-right:20px;/*border:1px solid #AD2122;*/float:right; /*-webkit-box-shadow: 0px 2px 0px 0px rgba(43,42,42,1);
+-moz-box-shadow: 0px 2px 0px 0px rgba(43,42,42,1);
+box-shadow: 0px 2px 0px 0px rgba(43,42,42,1);*/ }
+.ser-flight:hover { background:#779C29;}
+.ser-flight span {
+    background: url(images/searchbtn-arrow.png) no-repeat right center;
+    display: block;
+    padding-right: 15px;
+    text-align: center;
+    width: 100%;
+}
+.airsearchform.he .ser-flight{padding:0 12px 0 20px;}
+.airsearchform.he .ser-flight span{ background: url(images/searchbtn-arrow9.png) no-repeat left center;padding-left:15px;padding-right:0px;}
+.chkoptions label{font-weight:bold;margin-right:5px;}
+.he .chkoptions label{font-weight:bold;margin-right:0px;margin-left:5px;}
+.addrowbtn{margin-bottom:9px;}
+.addrow,.removerow{ background-color: #AAAAAA;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;box-shadow: 0 3px 5px #666666 inset;color:#FFF;padding:4px;text-decoration:none;}
+.addrow:hover,.removerow:hover{background-color:#3F3F3F;color:#fff;}
+
+/*normal tabs if not inside matrix*/
+.OFtabcontainer.cf:before {clear: both;}
+.cf:before, .cf:after {content: "";display: table;}
+.cf:after {clear: both;}
+.cf:before, .cf:after {content: "";display: table;}
+.menu_list_left {float: none;margin-bottom: 10px;text-align: center;width: 100%;}
+.OFContainer{text-align:center;}
+.OFcontent{text-align:left;display:inline-block;}
+.OFtabcontainer{width:100%;background:none;padding:0;margin:0;border:0px none;}
+.tabsinn{display:inline-block;}
+.tabsinn ul{background: #87b5ca;border-radius: 5px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;height: 40px;margin: 0; padding: 0;width:450px;}
+.tabsinn ul li{border-right: 1px solid #4F91B0;cursor: pointer;display: inline-block;padding:0.35em 0.47em;text-align: center;min-width:27%;width:auto!important;background:none;float:none;margin:0;height:auto;}
+.tabsinn ul li:last-child{border:0px none!important;}
+.tabsinn ul li a{ color: #FFFFFF;cursor: pointer;display: block;font-size: 13px;font-weight: bold;text-decoration: none;width: 100%;height:auto;padding:0;}
+.tabsinn ul li a label{cursor:pointer;padding:0.35em;display:inline-block;width:90%}
+.tabsinn ul li.active label{background-color:#3f3f3f;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+width:93%;}
+
+/*tabs on result page for matrix*/
+#Matrix_ModifySearchForm .OFtabcontainer{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #D2D2D2;border-radius:5px;float:left;width:81%;margin-left:-1px;padding:10px 7px 10px 14px}
+#Matrix_ModifySearchForm .tabsinn{float:left;line-height:20px;width:16.6%;padding:0}
+#Matrix_ModifySearchForm .tabsinn ul{list-style:none outside none;width:auto;background:none;margin:10px 0 0;padding:0}
+#Matrix_ModifySearchForm .tabsinn li{background:url(images/tabblank2.png) no-repeat left top;float:left;height:45px;width:161px;min-width:0;border-right:0;text-align:left;margin:0 0 4px -6px;padding:0}
+#Matrix_ModifySearchForm .tabsinn ul li:hover,#Matrix_ModifySearchForm .tabsinn ul li.active{background-position:left -45px}
+#Matrix_ModifySearchForm .tabsinn ul li a{color:#FFFFFF;display:block;float:left;font-size:18px;height:45px;line-height:22px;width:161px;font-weight:bold;text-decoration:none;padding:11px 0 0 15px}
+#Matrix_ModifySearchForm .tabsinn ul li a label{cursor:pointer;background:none;padding:0}
+/*calendar*/
+div.calendar{font-size:9px!important;-moz-user-select:none;z-index:1000;}
+div.calendar table{width:100%;}
+div.calendar table.calText td{padding:8px;border:1px solid #B3B3B3;}
+td.divider{border-right:solid 1px  #EDA25F;}
+.calText{cursor:default;font:9px!important;border-collapse: collapse;}
+.calText select{background-color:#f2f2f2;color:#1A4E6B;height:22px;padding:0;font-size:100%;border:1px solid #BBBBBB;}
+.wkDay{color:#333333}
+.wDay,.wkDay{color:#333333;background-color:#FAFAFA;
+background: #F0EDED ; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg3ZTBmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzUzY2JmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNWFiZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+background: -moz-linear-gradient(top, #FAFAFA  0%, #E8E6E6 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA ), color-stop(100%,#E8E6E6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #FAFAFA  0%,#E8E6E6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #FAFAFA  0%,#E8E6E6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #FAFAFA  0%,#E8E6E6 100%); /* IE10+ */
+background: linear-gradient(to bottom, #FAFAFA  0%,#E8E6E6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FAFAFA', endColorstr='#E8E6E6',GradientType=0 ); /* IE6-8 */
+
+}
+.wDay.nodate,.wkDay.nodate,.wkNoSelDay,.wNoSelDay{color:#777777;background: #E0DCDC ; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg3ZTBmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzUzY2JmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNWFiZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+background: -moz-linear-gradient(top, #E0DCDC  0%, #DDDDDD 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E0DCDC ), color-stop(100%,#DDDDDD)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #E0DCDC  0%,#DDDDDD 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #E0DCDC  0%,#DDDDDD 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #E0DCDC  0%,#DDDDDD 100%); /* IE10+ */
+background: linear-gradient(to bottom, #E0DCDC  0%,#DDDDDD 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E0DCDC', endColorstr='#DDDDDD',GradientType=0 ); /* IE6-8 */}
+
+.dayNm{background-color:#EFF6FA;color:#1A4E6B;border:1px solid #BBBBBB!important;}
+.cDay{cursor:pointer;color:#FFFFFF;
+background: #87B5CA ; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg3ZTBmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzUzY2JmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNWFiZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+background: -moz-linear-gradient(top, #87B5CA  0%, #4F91B0 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87B5CA ), color-stop(100%,#4F91B0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #87B5CA  0%,#4F91B0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #87B5CA  0%,#4F91B0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #87B5CA  0%,#4F91B0 100%); /* IE10+ */
+background: linear-gradient(to bottom, #87B5CA  0%,#4F91B0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87B5CA', endColorstr='#4F91B0',GradientType=0 ); /* IE6-8 */
+text-shadow:0 -1px 1px #145072;-moz-text-shadow:0 -1px 1px #145072;-webkit-text-shadow:0 -1px 1px #145072;
+}
+.cHead{background-color: #4F91B0!important;color:#fff!important;font-size: 90%;font-weight: bold;padding: 2px 0;width: 100%;}
+.cHead td{border:0px none!important;font-size:11px;}
+.navBtn{
+	color:#fff;
+	cursor:pointer;
+	}
+.navBtn:hover{background-color:#A9B6B5;}
+.navBtn_off{
+	color: #999999;
+	cursor:default;
+}
+.calText td{transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0s;}
+/**END Air Search Form**/
+
+
+/**Start Hotel Search Form**/
+.hotelsearchform{width:500px}
+.sf-sub-title{color:#585858;font-size:16px!important;font-weight:bold;padding:3px 0 10px 15px}
+.sf-textbox-main{background:url(images/dotted-border.jpg) repeat-x scroll center bottom rgba(0,0,0,0);height:34px;padding-bottom:18px}
+.sf-textbox-main input{border:1px solid #DFDFDF;border-radius:3px 3px 3px 3px;height:24px;margin-left:13px;width:463px!important;padding:3px 5px 7px}
+.sf-bot-border{background:url(images/dotted-border.jpg) repeat-x scroll center bottom rgba(0,0,0,0);padding:0 0 15px}
+.hotelsearchform .nomargin{padding-left:13px;margin:0}
+.hotelsearchform .calinput{border:1px solid #DFDFDF;border-radius:3px 3px 3px 3px;height:21px;margin-top:10px;width:138px;display:inline-block;padding:2px 5px}
+.he-hotelsearchform .calinput{padding: 2px 0 2px 22px;}
+.he-hotelsearchform .sf-search a{text-align:center;float:left;}
+.hotelsearchform .calinput input,.hotelsearchform .calinput div{border:0px none!important;}
+.hotelsearchform div.date{background-image:url(images/calicon.jpg);width:150px;}
+.combosmall{margin-top:10px;margin-right:5px;}
+.combosmall .dropdown{
+   background: url(images/sel-arrow.png) center right no-repeat;
+    margin: 0 !important;
+    width: 60px !important;
+	border:1px solid #DFDFDF;
+	border-radius:5px;
+	height:26px!important;
+	line-height:26px!important;
+	text-align:left;
+}
+.he-hotelsearchform .combosmall .dropdown{background: url(images/sel-arrow.png) 11% center no-repeat;padding-right:7px;text-align:right;}
+.sf-search a{background:url(images/searchbtn.png) 0 0 no-repeat; width:120px; height:32px; line-height:32px; display:inline-block; font-size:16px; color:#fff; text-decoration:none; padding:0 12px; margin-right:2px; text-shadow:#f6b534 0 -1px;margin-top:20px;float:right;}
+.he-hotelsearchform .hotel-allcombo .dropdown{background: url(images/sel-arrow.png) 3% center no-repeat;padding-right:7px;text-align:right;}
+.sf-room {
+    color: #AF2020;
+    font-size: 15px;
+	font-weight:bold;
+}
+.sf-form-title {
+    padding: 0 13px 10px 10px;
+}
+.sf-age-checkin{   color: #4B4B4B;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 0 0 13px;}
+.lessmargin{margin-top:4px!important;margin-bottom:4px;}
+/**End Hotel Search Form**/
+
+/*css for responsive page*/
+@media only screen and (max-width: 959px) {
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+body{font-family:'Open Sans', sans-serif!important;}
+#Matrix_ModifySearchForm .OFtabcontainer{width:80%;}
+.airsearchform .OFcontent{margin:10px auto;}
+.tabsinn{width:16.7%;}
+}
+@media only screen and (min-width: 120px) and (max-width: 767px) {
+.airsearchform {
+    padding: 5px;
+    width: auto !important;
+}
+#Matrix_ModifySearchForm .OFtabcontainer{width:100%;background:none;padding:0;margin:0;border:0px none;}
+#Matrix_ModifySearchForm .tabsinn{width:100%;}
+#Matrix_ModifySearchForm .tabsinn ul{background: #87b5ca;border-radius: 5px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;height: 40px;margin: 0; padding: 0;width:100%!important;}
+#Matrix_ModifySearchForm .tabsinn ul li{border-right: 1px solid #4F91B0;cursor: pointer;display: inline-block;padding:0.35em 0.47em;text-align: center;min-width:27%;width:auto!important;background:none;float:none;margin:0;height:auto;}
+#Matrix_ModifySearchForm .tabsinn ul li:last-child{border:0px none!important;}
+#Matrix_ModifySearchForm .tabsinn ul li a{ color: #FFFFFF;cursor: pointer;display: block;font-size: 13px;font-weight: bold;text-decoration: none;width: 100%;height:auto;padding:0;}
+#Matrix_ModifySearchForm .tabsinn ul li a label{cursor:pointer;padding:0.35em;display:inline-block;}
+#Matrix_ModifySearchForm .tabsinn ul li.active label{background-color:#3f3f3f;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+width:93%;}
+
+.calText td{font-weight:bold;}
+.airsearchform{width:100%;}
+.fromtosearch dd, dd.pref-airlines{width:95.5%!important;}
+.calform dd{width:49% !important}
+.calform dd.return-panel{width:100%!important;}
+.calform .return-panel, .nextrow{clear:both;margin-left:0px!important;}
+dd.seatclass{width:97.5%!important;}
+.check{width:100%;margin-bottom:10px;}
+.check .chkoptions{float:left;width:50%!important;}
+div.calendar{width:98%!important;position:fixed!important;bottom:4px!important;top:auto!important;left:0px!important;margin:2px 4px;}
+div.calendar table.calText td {font-size:13px;}
+div.list.othercombo{width:98%!important;left:0px!important;margin:2px 3px;position:fixed!important;bottom:2px!important;top:auto!important;font-size:14px;}
+div.list.airports{width:98%!important;font-size:14px;left:0px!important;margin:2px 3px;}
+div.list_item,div.list_item_hover{padding:10px 5px!important;}
+div.list_item,div.list_item_hover{border-bottom:1px solid #BBBBBB;font-weight:bold;font-size:16px;}
+div.list_item_hover{background:#87B5CA!important;color:#fff;}
+div.list.airports div.list_item_hover{border-bottom:1px solid #BBBBBB;font-weight:bold;font-size:16px;background:#87B5CA!important;}
+}

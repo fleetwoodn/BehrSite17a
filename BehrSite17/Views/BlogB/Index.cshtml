@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BehrSite17.Models.BlogPosts>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PostTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostTags)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostTags)
+        </td>
+        
+        <td>
+            
+            @Html.ActionLink("Open", "Details", new { id=item.ID })
+           
+        </td>
+    </tr>
+}
+
+</table>

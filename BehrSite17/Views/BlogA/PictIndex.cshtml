@@ -1,0 +1,60 @@
+﻿@model IEnumerable<BehrSite17.Models.BlogPicts>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h5>I dont know why or how you got here, but have fun while you are here</h5>
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    @using (Html.BeginForm())
+    {
+    }
+
+<p>
+    Post ID: @Html.TextBox("SearchString") <br />
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PostFK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PicTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EditDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PictPict)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostFK)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PicTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EditDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictPict)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "PictEdit", new { id = item.ID }) |*@
+                @*@Html.ActionLink("Details", "Details", new { id=item.ID }) |*@
+                @Html.ActionLink("Delete", "PictDelete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

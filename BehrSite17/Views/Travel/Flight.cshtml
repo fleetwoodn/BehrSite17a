@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Flight";
+}
+
+@section optionalHeadJs
+{
+    <script type="text/javascript" language="javascript" id="OFrameworkJS" themeuri="~/OdyAirSearch/"
+        skinid="default" src="https://book.cooktravel.net/web/SearchForms/OFramework.js"></script>
+    }
+
+<style>
+    .content-wrapper {
+        /*set backimage randomly -- test image 0yd2pexel1.PNG*/
+        /*background-image:url("../../Content/Images/BackImages/0yd2pexel1.PNG");
+    background-size: 100% 100%;*/
+        
+    }
+
+    .body {
+        /*background-image: url("../../Content/Images/BackImages/0yd2pexel1.PNG");*/
+        background-color:aqua !important;
+
+    }
+</style>
+
+
+<h2>Flight</h2>
+
+<body>
+
+    <div class="widget-content tab-content txt-center">
+        <section class="tab-pane fade active in ">
+            @*Div below is required to render form. It can appear anywhere in the HTML with the ID: AirSearchForm*@
+            <div id="AirSearchForm"></div>
+        </section>
+    </div>
+    <div class="templates">
+        <section id="suggestion-box-template">
+            <p class="suggestion-box-msg suggestion-box-wait-msg icon ic-busy hidden">
+                Please wait...
+            </p>
+        </section>
+    </div>
+
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum laoreet ex, eu sodales ante hendrerit vestibulum. Ut vulputate rutrum leo, ac efficitur ex vehicula in. Sed vel rhoncus odio. Maecenas sed lorem nec nisl convallis iaculis nec quis lorem. Ut quam erat, auctor nec ipsum ac, commodo egestas diam. Ut sagittis purus in volutpat faucibus. Cras suscipit arcu eget suscipit ultrices. Fusce laoreet sollicitudin libero ac aliquam. Aliquam eleifend bibendum purus, vitae dignissim felis pellentesque sed. Cras eget ipsum posuere, lobortis velit et, maximus eros. Curabitur eu congue mauris, vitae semper dolor. Suspendisse feugiat lacus odio, a scelerisque massa tincidunt quis. Fusce iaculis gravida felis.
+
+        Sed mauris dui, luctus a egestas id, finibus id elit. Praesent in orci eu lorem semper gravida nec euismod eros. Morbi a ligula quis sapien faucibus cursus non non enim. Nulla at tortor vel nibh tempus lobortis. Vestibulum eget laoreet tellus. Praesent facilisis molestie risus, placerat facilisis sem malesuada ut. Proin eget tellus a elit rutrum ullamcorper. Aenean et urna vehicula, congue arcu vel, pulvinar ex. Nullam posuere, mi vel viverra elementum, est odio aliquam est, eget efficitur dui ipsum vitae arcu.
+
+        Praesent consectetur scelerisque orci sed porta. Aliquam eget sodales purus, efficitur congue augue. Praesent et laoreet quam, eget pharetra nulla. Nunc sed metus ipsum. Suspendisse id imperdiet magna. Curabitur in vehicula libero. Pellentesque eu ligula ut mi porta suscipit. Suspendisse eu nunc sit amet ante euismod efficitur a non ipsum.
+
+        Sed est odio, sodales a enim ac, gravida gravida enim. Duis tincidunt faucibus ipsum, vel bibendum arcu ultrices ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Curabitur suscipit diam et orci fermentum commodo. Aenean sapien elit, facilisis eu laoreet ac, placerat quis ex. Ut sed hendrerit risus. Sed id vehicula lectus. Suspendisse potenti. Praesent risus nulla, blandit ac porta eu, tristique ut erat. Suspendisse eu iaculis ligula. Vestibulum porta felis et rhoncus posuere. Phasellus ante lorem, fringilla sit amet sagittis vitae, viverra eu turpis. In nunc libero, viverra sit amet nunc id, interdum tincidunt dui.
+
+        Duis rhoncus, odio vitae commodo fringilla, ex lorem tincidunt est, eu convallis felis mi id quam. Duis eros turpis, volutpat ut laoreet non, ornare quis mauris. Suspendisse consequat suscipit eros, eget viverra purus varius vel. Praesent vitae quam leo. Fusce posuere ipsum eget quam pretium, ut euismod nibh volutpat. Curabitur quis aliquam nulla, et aliquam lorem. Cras non sodales orci. Donec congue nisl lacus. Nullam egestas consectetur condimentum. 
+    </p>
+</body>
+
+
+@*<script language="javascript" type="text/javascript">
+    //Initialize Odysseus Search Widget with your siteitemid and other configuration parameters
+    if (OFramework != null && (document.getElementById("AirSearchForm") != null || document.getElementById("AirSearchForm") != 'undefined')) {
+        OFramework.QSParams.Add("siid", "@(TempData["siid"])");   // Set dynamically through URL  /?siid=xxxxxxx  for easy testing. (siid can be generated for each affiliate/website)
+        //OFramework.QSParams.Add("referrer", "cookStandAlone"); // be sure to remove this or set the right value for referrer
+        oAForm = OFramework.AirSearchForm(document.getElementById("AirSearchForm"));
+        //oAForm.Target = "_new"; //use this only if you want the search results to open in a different page
+    }
+</script>*@
+
+<script language="javascript" type="text/javascript">
+    //Initialize Odysseus Search Widget with your siteitemid and other configuration parameters
+    if (OFramework != null && (document.getElementById("AirSearchForm") != null || document.getElementById("AirSearchForm") != 'undefined')) {
+        OFramework.QSParams.Add("siid", "129673");   // Set dynamically through URL  /?siid=xxxxxxx  for easy testing. (siid can be generated for each affiliate/website)
+        //OFramework.QSParams.Add("referrer", "cookStandAlone"); // be sure to remove this or set the right value for referrer
+        oAForm = OFramework.AirSearchForm(document.getElementById("AirSearchForm"));
+        //oAForm.Target = "_new"; //use this only if you want the search results to open in a different page
+    }
+</script>

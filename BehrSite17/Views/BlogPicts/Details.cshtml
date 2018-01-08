@@ -1,0 +1,50 @@
+﻿@model BehrSite17.Models.BlogPicts
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BlogPicts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PostFK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostFK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PicTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PicTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EditDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EditDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PictPict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictPict)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

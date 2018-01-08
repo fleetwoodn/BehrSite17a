@@ -1,0 +1,243 @@
+﻿<div class="hotelsearchform fr">
+  <div class="sf-top">
+    <div class="sf-sub-title">Destination</div>
+  </div>
+  <div class="sf-textbox-main">
+    <OFramework:HintInput id="Destination" hinttext="City, Location or Airport" itemTemplate="name" listHeight="10" listWidth="430px" tabindex="1" autocomplete="off"></OFramework:HintInput>
+  </div>
+  <div class="sf-bot-border">
+    <div class="datecont">
+      <div class="datebox"> <strong class="sf-sub-title" style="padding:5px 0px 0px 2px; display:block;" >Enregistrement </strong>
+        <dd>
+          <div class="calinput">
+            <OFramework:DateInput id="CheckInDate" tabindex="3"></OFramework:DateInput>
+          </div>
+          <span id="CheckInDay" style="display:none;"></span> </dd>
+      </div>
+    </div>
+    <div class="datecont"> <strong class="sf-sub-title" style="padding:5px 0px 0px 2px; display:block;" >contrôler la sortie de</strong>
+      <dd>
+        <div class="calinput">
+          <OFramework:DateInput id="CheckOutDate" tabindex="3"></OFramework:DateInput>
+        </div>
+        <span id="CheckOutDay" style="display:none;"></span> </dd>
+    </div>
+  </div>
+  <div class="roomdetailcont">
+    <div class="roomcombo">
+      <p>Chambres</p>
+      <div class="combosmall">
+        <OFramework:DropdownList id="RoomCount"  listClass="othercombo" listHeight="4" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item></OFramework:DropdownList>
+      </div>
+           
+    </div>
+    <div class="guestcont"  id="RoomOneTR"> <strong class="sf-room" >chambre #1</strong>
+      <div class="adultscont fr"> <strong class="sf-sub-title fr" >Adultes</strong>
+        <div class="combosmall">
+          <OFramework:DropdownList id="RoomOneAdults"  listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title fr" >Enfants</strong>
+       <div class="combosmall">
+            <OFramework:DropdownList id="RoomOneChildren"  listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+
+      
+      <div class="childspec" id="RoomOneChildTR" style="display:none;">
+       <strong class="sf-sub-title">âge (s) de l'enfant à l'arrivée</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomOneChildOneAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomOneChildTwoAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomOneChildThreeAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomOneChildFourAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+      
+       </div>
+
+    </div>
+    
+    
+    
+    <div id="RoomTwoTR" style="display:none;">
+    <div class="roomcombo">
+      <p>&nbsp;</p>
+      <div class="combosmall">
+      </div>
+    </div>
+    <div class="guestcont"> <strong class="sf-room" >chambre #2</strong>
+      <div class="adultscont"> <strong class="sf-sub-title" >Adultes</strong>
+        <div class="combosmall">
+          <OFramework:DropdownList id="RoomTwoAdults"  listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title" >Enfants</strong>
+       <div class="combosmall">
+            <OFramework:DropdownList id="RoomTwoChildren"  listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+      
+      
+      <div class="childspec" id="RoomTwoChildTR" style="display:none;">
+       <strong class="sf-sub-title">âge (s) de l'enfant à l'arrivée</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomTwoChildOneAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomTwoChildTwoAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomTwoChildThreeAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomTwoChildFourAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+      
+       </div>
+       
+       
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    <div id="RoomThreeTR" style="display:none;">
+    <div class="roomcombo">
+      <p>&nbsp;</p>
+      <div class="combosmall">
+      </div>
+    </div>
+    <div class="guestcont"> <strong class="sf-room" >chambre #3</strong>
+      <div class="adultscont"> <strong class="sf-sub-title" >Adultes</strong>
+        <div class="combosmall">
+         <OFramework:DropdownList id="RoomThreeAdults" style="width:60px;" listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title" >Enfants</strong>
+       <div class="combosmall">
+           <OFramework:DropdownList id="RoomThreeChildren" style="width:60px;" listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+      
+      <div class="childspec" id="RoomThreeChildTR" style="display:none;">
+       <strong class="sf-sub-title">âge (s) de l'enfant à l'arrivée</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomThreeChildOneAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomThreeChildTwoAge" style="width:60px;" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomThreeChildThreeAge" style="width:60px;" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomThreeChildFourAge" style="width:60px;" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+       </div>
+       
+    </div>
+    
+    </div>
+
+    <div id="RoomFourTR" style="display:none;">
+    <div class="roomcombo">
+      <p>&nbsp;</p>
+      <div class="combosmall">
+      </div>
+    </div>
+    <div class="guestcont"> <strong class="sf-room" >chambre #4</strong>
+      <div class="adultscont"> <strong class="sf-sub-title" >Adultes</strong>
+        <div class="combosmall">
+         <OFramework:DropdownList id="RoomFourAdults" style="width:60px;" listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title" >Enfants</strong>
+       <div class="combosmall">
+           <OFramework:DropdownList id="RoomFourChildren" style="width:60px;" listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+      
+      <div class="childspec" id="RoomFourChildTR" style="display:none;">
+       <strong class="sf-sub-title">âge (s) de l'enfant à l'arrivée</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomFourChildOneAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomFourChildTwoAge" style="width:60px;" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomFourChildThreeAge" style="width:60px;" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomFourChildFourAge" style="width:60px;" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+       </div>
+       
+    </div>
+    
+    </div>
+ 
+    <div class="hotelratings">
+    
+    <strong class="sf-sub-title">Classement de l'hôtel</strong>
+          <dd class="fr">
+            <div class="hotel-allcombo">
+              <OFramework:DropdownList id="Class" listWidth="200px" listHeight="6" tabindex="-1" listClass="hotelratingdropdown"> 
+			  <item id="" name="tous"></item> <item id="1" name="1 Étoile ou plus"></item> <item id="2" name="2 Étoiles ou plus"></item> <item id="3" name="3 Étoiles ou plus"></item> <item id="4" name="4 Étoiles ou plus"></item> <item id="5" name="5 étoiles"></item> </OFramework:DropdownList>
+            </div>
+          </dd>
+      <div class="searchbtn"><a href="javascript:Container.SubmitSearch();" id="SearchButton" class="fr">recherche</a></div>
+    </div>
+    
+  
+  </div>
+</div>

@@ -1,0 +1,378 @@
+<div class="airsearchform">
+
+    <div class="row " style="padding-bottom:20px;padding-top:5px;margin-left:20px;">
+
+
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active" for="SearchTypeRoundTrip">
+                <input type="radio" autocomplete="off"
+                       name="searchType" value="RoundTrip" id="SearchTypeRoundTrip" onchange="Container.ChangeSearchType(this.value)" checked>
+                <!--<em class="glyphicon glyphicon glyphicon-circle-arrow-left"></em>--> Round Trip
+            </label>
+            <label class="btn btn-primary" for="masterCard">
+                <input type="radio" name="searchType" value="OneWay" id="SearchTypeOneWay" onchange="Container.ChangeSearchType(this.value)"
+                       autocomplete="off"><!--<em class="glyphicon glyphicon-circle-arrow-up"></em>-->
+                One Way
+            </label>
+            <label class="btn btn-primary" for="SearchTypeOneWay">
+                <input type="radio"
+                       name="searchType" value="MultiDestination" id="SearchTypeMultiDestination" onchange="Container.ChangeSearchType(this.value)"
+                       autocomplete="off"><!--<em class="glyphicon glyphicon glyphicon-circle-arrow-right"></em>--> Multi City
+            </label>
+        </div>
+    </div>
+
+    <div class="OFtabcontainer cf">
+        <div class="OFcontent">
+            <dl class="fromtosearch cf" id="FromToPanel">
+                <dd class="from">
+                    <label>From</label>
+                    <oframework:input id="From" datasource="Airports" itemtemplate="[id] name, country" listclass="airports" listwidth="250px" tabindex="1" style="color:#000000;"></oframework:input>
+                </dd>
+                <dd>
+                    <label>To</label>
+                    <oframework:input id="To" datasource="Airports" itemtemplate="[id] name, country" listclass="airports" listwidth="250px" tabindex="2" style="color:#000000;"></oframework:input>
+                </dd>
+            </dl>
+            <dl class="calform cf" id="DatesPanel">
+                <dd class="nomargin">
+                    <div class="calbox">
+                        <oframework:dateinput id="FromDate" tabindex="3" calendarlayout="1|1"></oframework:dateinput>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="allcombo">
+                        <oframework:dropdownlist id="FromTime" listwidth="130px" listclass="othercombo" tabindex="4">
+                            <item id="" name="Anytime"></item>
+                            <item id="mo" name="Morning"></item>
+                            <item id="af" name="Afternoon"></item>
+                            <item id="ev" name="Evening"></item>
+                        </oframework:dropdownlist>
+                    </div>
+                </dd>
+                <dd id="ReturnPanel" class="return-panel">
+                    <dl>
+                        <dd>
+                            <div class="calbox">
+                                <oframework:dateinput id="ReturnDate" tabindex="5" calendarlayout="1|1"></oframework:dateinput>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="allcombo">
+                                <oframework:dropdownlist id="ReturnTime" listwidth="130px" listclass="othercombo" tabindex="6">
+                                    <item id="" name="Anytime"></item>
+                                    <item id="mo" name="Morning"></item>
+                                    <item id="af" name="Afternoon"></item>
+                                    <item id="ev" name="Evening"></item>
+                                </oframework:dropdownlist>
+                            </div>
+                        </dd>
+                    </dl>
+                </dd>
+            </dl>
+            <div id="MultiCityPanel" class="multi-city" style="display:none;">
+                <table id="MultiCityTBL" cellspacing="0" cellpadding="0" width="100%">
+                    <tr class="mbookrow" id="Segment_0">
+                        <td>
+                            <dl class="fromtosearch cf" style="display:table-row;">
+                                <dd class="from">
+                                    <label>From</label>
+                                    <oframework:input id="FromCity_0" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="1" listclass="airports"></oframework:input>
+                                </dd>
+                                <dd>
+                                    <label>To</label>
+                                    <oframework:input id="ToCity_0" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="2" listclass="airports"></oframework:input>
+                                </dd>
+                            </dl>
+                            <dl class="calform cf">
+                                <dd class="nomargin">
+                                    <div class="calbox">
+                                        <oframework:dateinput id="FlyDate_0" tabindex="3" calendarlayout="1|1"></oframework:dateinput>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="allcombo">
+                                        <oframework:dropdownlist id="FlyTime_0" listwidth="130px" listclass="othercombo" tabindex="4">
+                                            <item id="" name="Anytime"></item>
+                                            <item id="mo" name="Morning"></item>
+                                            <item id="af" name="Afternoon"></item>
+                                            <item id="ev" name="Evening"></item>
+                                        </oframework:dropdownlist>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr class="mbookrow" id="Segment_1">
+                        <td>
+                            <dl class="fromtosearch cf">
+                                <dd class="from">
+                                    <label>From</label>
+                                    <oframework:input id="FromCity_1" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="5" listclass="airports"></oframework:input>
+                                </dd>
+                                <dd>
+                                    <label>To</label>
+                                    <oframework:input id="ToCity_1" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="6" listclass="airports"></oframework:input>
+                                </dd>
+                            </dl>
+                            <dl class="calform cf">
+                                <dd class="nomargin">
+                                    <div class="calbox">
+                                        <oframework:dateinput id="FlyDate_1" tabindex="7" calendarlayout="1|1"></oframework:dateinput>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="allcombo">
+                                        <oframework:dropdownlist id="FlyTime_1" listwidth="130px" listclass="othercombo" tabindex="8">
+                                            <item id="" name="Anytime"></item>
+                                            <item id="mo" name="Morning"></item>
+                                            <item id="af" name="Afternoon"></item>
+                                            <item id="ev" name="Evening"></item>
+                                        </oframework:dropdownlist>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr class="mbookrow" id="Segment_2" style="display:none;">
+                        <td>
+                            <dl class="fromtosearch cf">
+                                <dd class="from">
+                                    <label>From</label>
+                                    <oframework:input id="FromCity_2" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="9" listclass="airports"></oframework:input>
+                                </dd>
+                                <dd>
+                                    <label>To</label>
+                                    <oframework:input id="ToCity_2" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="10" listclass="airports"></oframework:input>
+                                </dd>
+                            </dl>
+                            <dl class="calform cf">
+                                <dd class="nomargin">
+                                    <div class="calbox">
+                                        <oframework:dateinput id="FlyDate_2" tabindex="11" calendarlayout="1|1"></oframework:dateinput>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="allcombo">
+                                        <oframework:dropdownlist id="FlyTime_2" listwidth="130px" listclass="othercombo" tabindex="12">
+                                            <item id="" name="Anytime"></item>
+                                            <item id="mo" name="Morning"></item>
+                                            <item id="af" name="Afternoon"></item>
+                                            <item id="ev" name="Evening"></item>
+                                        </oframework:dropdownlist>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr class="mbookrow" id="Segment_3" style="display:none;">
+                        <td>
+                            <dl class="fromtosearch cf">
+                                <dd class="from">
+                                    <label>From</label>
+                                    <oframework:input id="FromCity_3" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="13" listclass="airports"></oframework:input>
+                                </dd>
+                                <dd>
+                                    <label>To</label>
+                                    <oframework:input id="ToCity_3" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="14" listclass="airports"></oframework:input>
+                                </dd>
+                            </dl>
+                            <dl class="calform cf">
+                                <dd class="nomargin">
+                                    <div class="calbox">
+                                        <oframework:dateinput id="FlyDate_3" tabindex="15" calendarlayout="1|1"></oframework:dateinput>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="allcombo">
+                                        <oframework:dropdownlist id="FlyTime_3" listwidth="130px" listclass="othercombo" tabindex="16">
+                                            <item id="" name="Anytime"></item>
+                                            <item id="mo" name="Morning"></item>
+                                            <item id="af" name="Afternoon"></item>
+                                            <item id="ev" name="Evening"></item>
+                                        </oframework:dropdownlist>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr class="mbookrow" id="Segment_4" style="display:none;">
+                        <td>
+                            <dl class="fromtosearch cf">
+                                <dd class="from">
+                                    <label>From</label>
+                                    <oframework:input id="FromCity_4" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="17" listclass="airports"></oframework:input>
+                                </dd>
+                                <dd>
+                                    <label>To</label>
+                                    <oframework:input id="ToCity_4" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="18" listclass="airports"></oframework:input>
+                                </dd>
+                            </dl>
+                            <dl class="calform cf">
+                                <dd class="nomargin">
+                                    <div class="calbox">
+                                        <oframework:dateinput id="FlyDate_4" tabindex="19" calendarlayout="1|1"></oframework:dateinput>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="allcombo">
+                                        <oframework:dropdownlist id="FlyTime_4" listwidth="130px" listclass="othercombo" tabindex="20">
+                                            <item id="" name="Anytime"></item>
+                                            <item id="mo" name="Morning"></item>
+                                            <item id="af" name="Afternoon"></item>
+                                            <item id="ev" name="Evening"></item>
+                                        </oframework:dropdownlist>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                    <tr class="mbookrow" id="Segment_5" style="display:none;">
+                        <td>
+                            <dl class="fromtosearch cf">
+                                <dd class="from">
+                                    <label>From</label>
+                                    <oframework:input id="FromCity_5" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="21" listclass="airports"></oframework:input>
+                                </dd>
+                                <dd>
+                                    <label>To</label>
+                                    <oframework:input id="ToCity_5" datasource="Airports" itemtemplate="[id] name, country" listwidth="320px" tabindex="22" listclass="airports"></oframework:input>
+                                </dd>
+                            </dl>
+                            <dl class="calform cf">
+                                <dd class="nomargin">
+                                    <div class="calbox">
+                                        <oframework:dateinput id="FlyDate_5" tabindex="23" calendarlayout="1|1"></oframework:dateinput>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="allcombo">
+                                        <oframework:dropdownlist id="FlyTime_5" listwidth="130px" listclass="othercombo" tabindex="24">
+                                            <item id="" name="Anytime"></item>
+                                            <item id="mo" name="Morning"></item>
+                                            <item id="af" name="Afternoon"></item>
+                                            <item id="ev" name="Evening"></item>
+                                        </oframework:dropdownlist>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </td>
+                    </tr>
+                </table>
+                <div class="addrowbtn">
+                    <a class="addrow" href="Javascript:Container.AddSegment();">Add</a>&nbsp;/&nbsp;<a class="removerow" href="Javascript:Container.RemoveSegment();">Remove</a>
+                </div>
+            </div>
+            <dl class="calform cf" style="display:table-row;">
+                <dd class="nomargin">
+                    <div class="allcombo">
+                        <oframework:dropdownlist id="Adults" listwidth="130px" listclass="othercombo" tabindex="25">
+                            <item id="0" name="0 Adult"></item>
+                            <item id="1" name="1 Adult"></item>
+                            <item id="2" name="2 Adults"></item>
+                            <item id="3" name="3 Adults"></item>
+                            <item id="4" name="4 Adults"></item>
+                            <item id="5" name="5 Adults"></item>
+                            <item id="6" name="6 Adults"></item>
+                            <item id="7" name="7 Adults"></item>
+                            <item id="8" name="8 Adults"></item>
+                        </oframework:dropdownlist>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="allcombo">
+                        <oframework:dropdownlist id="Children" listwidth="130px" listclass="othercombo" tabindex="26">
+                            <item id="0" name="0 Child"></item>
+                            <item id="1" name="1 Child"></item>
+                            <item id="2" name="2 Children"></item>
+                            <item id="3" name="3 Children"></item>
+                            <item id="4" name="4 Children"></item>
+                            <item id="5" name="5 Children"></item>
+                            <item id="6" name="6 Children"></item>
+                            <item id="7" name="7 Children"></item>
+                        </oframework:dropdownlist>
+                    </div>
+                </dd>
+                <dd class="nextrow nomargin">
+                    <div class="allcombo">
+                        <oframework:dropdownlist id="InfantsInLap" listwidth="130px" listclass="othercombo" tabindex="27">
+                            <item id="0" name="0 Lap Infant"></item>
+                            <item id="1" name="1 Lap Infant"></item>
+                            <item id="2" name="2 Lap Infants"></item>
+                            <item id="3" name="3 Lap Infants"></item>
+                            <item id="4" name="4 Lap Infants"></item>
+                        </oframework:dropdownlist>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="allcombo">
+                        <oframework:dropdownlist id="InfantsInSeat" listwidth="130px" listclass="othercombo" tabindex="28">
+                            <item id="0" name="0 Seat Infant"></item>
+                            <item id="1" name="1 Seat Infant"></item>
+                            <item id="2" name="2 Seat Infants"></item>
+                            <item id="3" name="3 Seat Infants"></item>
+                            <item id="4" name="4 Seat Infants"></item>
+                        </oframework:dropdownlist>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="" style="display:table-row;">
+                <dd class="nomargin seatclass">
+                    <oframework:dropdownlist id="Class" listwidth="270px" listclass="othercombo" tabindex="29">
+                        <!--<item id="" name="All Class/Cabin"></item>-->
+                        <item id="Economy" name="Economy/Coach"></item>
+                        <item id="EconomyPremium" name="Premium Economy"></item>
+                        <item id="Business" name="Business Class"></item>
+                        <item id="First" name="First Class"></item>
+                    </oframework:dropdownlist>
+                </dd>
+                <dd class="nextrow check">
+                    <dl>
+                        <dd class="chkoptions">
+                            <input type=checkbox id="IntervalCHK" value="1" tabindex="30" />
+                            <label for="IntervalCHK">Flexible dates</label>
+                        </dd>
+                        <dd class="chkoptions">
+                            <input type=checkbox value="true" id="NonStopOption" tabindex="31" />
+                            <label for="NonStopOption">Direct flights</label>
+                        </dd>
+                        <dd class="chkoptions cf">
+                            <input type=checkbox value="true" id="RefundableOption" tabindex="32" />
+                            <label for="RefundableOption">Fares with no penalties</label>
+                        </dd>
+                        <dd class="chkoptions">
+                            <input type=checkbox value="80" id="RadiusCHK" tabindex="33" />
+                            <label for="RadiusCHK">Nearby airports</label>
+                        </dd>
+                    </dl>
+                </dd>
+            </dl>
+            <!--<dl style="display:table-row;">
+                <dd>
+                    <strong>Preferred Airlines</strong>
+                </dd>
+                <dd class="pref-airlines">
+                    <label>1.</label>
+                    <OFramework:Input id="Airlines" datasource="Airlines" itemTemplate="[code] name" listClass="airports" listWidth="250px" tabindex="34"></OFramework:Input>
+                </dd>
+                <dd class="pref-airlines">
+                    <label>2.</label>
+                    <OFramework:Input id="AirlinesTwo" datasource="Airlines" itemTemplate="[code] name" listClass="airports" listWidth="250px" tabindex="35"></OFramework:Input>
+                </dd>
+            </dl>-->
+            <dl style="display:table-row">
+                <dd>
+                    <a href="javascript:Container.SubmitSearch();" class="ser-flight alignright"><span>Search Flights</span></a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+
+
+<!--<script>
+    function showMe(elem) {
+        console.log("hello " + elem.id + ": " + document.getElementById("visa").checked + " " + document.getElementById("masterCard").checked + " " + document.getElementById("discover").checked);
+    }
+</script>-->

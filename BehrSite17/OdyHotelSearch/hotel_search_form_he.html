@@ -1,0 +1,226 @@
+<div class="hotelsearchform he">
+  <div class="sf-top">
+    <div class="sf-sub-title">יעד</div>
+  </div>
+  <div class="sf-textbox-main">
+    <OFramework:HintInput id="Destination" hinttext="City, Location or Airport" itemTemplate="name" listHeight="10" listWidth="430px" tabindex="1" autocomplete="off"></OFramework:HintInput>
+  </div>
+  <div class="sf-bot-border">
+    <div class="datecont">
+      <div class="datebox"> <strong class="sf-sub-title" style="padding:5px 0px 0px 2px; display:block;" >בדקו ב </strong>
+        <dd>
+          <div class="calinput">
+            <OFramework:DateInput id="CheckInDate" tabindex="3"></OFramework:DateInput>
+          </div>
+          <span id="CheckInDay" style="display:none;"></span> </dd>
+      </div>
+    </div>
+    <div class="datecont"> <strong class="sf-sub-title" style="padding:5px 0px 0px 2px; display:block;" >עזיבה</strong>
+      <dd>
+        <div class="calinput">
+          <OFramework:DateInput id="CheckOutDate" tabindex="3"></OFramework:DateInput>
+        </div>
+        <span id="CheckOutDay" style="display:none;"></span> </dd>
+    </div>
+  </div>
+  <div class="roomdetailcont">
+    <div class="roomcombo">
+      <p>חדרים</p>
+      <div class="combosmall">
+        <OFramework:DropdownList id="RoomCount"  listClass="othercombo" listHeight="4" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item></OFramework:DropdownList>
+      </div>
+           
+    </div>
+    <div class="guestcont"  id="RoomOneTR"> <strong class="sf-room" >1 חדר </strong>
+      <div class="adultscont"> <strong class="sf-sub-title" >מבוגרים</strong>
+        <div class="combosmall">
+          <OFramework:DropdownList id="RoomOneAdults"  listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title" >ילדים</strong>
+       <div class="combosmall">
+            <OFramework:DropdownList id="RoomOneChildren"  listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+
+      
+      <div class="childspec" id="RoomOneChildTR" style="display:none;">
+       <strong class="sf-sub-title">גיל ילד (ים) בעתביצוע הצ'ק ב</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomOneChildOneAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomOneChildTwoAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomOneChildThreeAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomOneChildFourAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>     
+       </div>
+    </div>
+    
+    <div id="RoomTwoTR" style="display:none;">
+    <div class="roomcombo">
+      <p>&nbsp;</p>
+      <div class="combosmall">
+      </div>
+    </div>
+    <div class="guestcont"> <strong class="sf-room" >2דר 1</strong>
+      <div class="adultscont"> <strong class="sf-sub-title" >מבוגרים</strong>
+        <div class="combosmall">
+          <OFramework:DropdownList id="RoomTwoAdults" listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title" >ילדים</strong>
+       <div class="combosmall">
+            <OFramework:DropdownList id="RoomTwoChildren" listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+      
+      
+      <div class="childspec" id="RoomTwoChildTR" style="display:none;">
+       <strong class="sf-sub-title">גיל ילד (ים) בעתביצוע הצ'ק ב</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomTwoChildOneAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomTwoChildTwoAge"  listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomTwoChildThreeAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomTwoChildFourAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>   
+       </div>       
+    </div>    
+    </div>
+   
+    <div id="RoomThreeTR" style="display:none;">
+    <div class="roomcombo">
+      <p>&nbsp;</p>
+      <div class="combosmall">
+      </div>
+    </div>
+    <div class="guestcont"> <strong class="sf-room" >3דר 1</strong>
+      <div class="adultscont"> <strong class="sf-sub-title" >מבוגרים</strong>
+        <div class="combosmall">
+         <OFramework:DropdownList id="RoomThreeAdults" listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title" >ילדים</strong>
+       <div class="combosmall">
+           <OFramework:DropdownList id="RoomThreeChildren" listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+      
+      <div class="childspec" id="RoomThreeChildTR" style="display:none;">
+       <strong class="sf-sub-title">גיל ילד (ים) בעתביצוע הצ'ק ב</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomThreeChildOneAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomThreeChildTwoAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomThreeChildThreeAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomThreeChildFourAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>      
+       </div>     
+    </div>    
+    </div>
+	
+	<div id="RoomFourTR" style="display:none;">
+    <div class="roomcombo">
+      <p>&nbsp;</p>
+      <div class="combosmall">
+      </div>
+    </div>
+    <div class="guestcont"> <strong class="sf-room" >4דר 1</strong>
+      <div class="adultscont"> <strong class="sf-sub-title" >מבוגרים</strong>
+        <div class="combosmall">
+         <OFramework:DropdownList id="RoomFourAdults" listClass="othercombo" listHeight="7" tabindex="-1"> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> <item id="5" name="5"></item> <item id="6" name="6"></item> </OFramework:DropdownList>
+        </div>
+      </div>
+      
+      <div class="adultscont"> <strong class="sf-sub-title" >ילדים</strong>
+       <div class="combosmall">
+           <OFramework:DropdownList id="RoomFourChildren" listClass="othercombo" listHeight="5" tabindex="-1"> <item id="0" name="-"></item> <item id="1" name="1"></item> <item id="2" name="2"></item> <item id="3" name="3"></item> <item id="4" name="4"></item> </OFramework:DropdownList>
+          </div>
+      </div>
+      
+      <div class="childspec" id="RoomFourChildTR" style="display:none;">
+       <strong class="sf-sub-title">גיל ילד (ים) בעתביצוע הצ'ק ב</strong>
+      <div class="combosmall">
+
+                  <OFramework:DropdownList id="RoomFourChildOneAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomFourChildTwoAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+     
+      
+      <div class="combosmall">
+                  <OFramework:DropdownList id="RoomFourChildThreeAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>
+                
+                <div class="combosmall">
+                  <OFramework:DropdownList id="RoomFourChildFourAge" listClass="othercombo" listHeight="5" style="visibility:hidden;" tabindex="-1">
+                  </OFramework:DropdownList>
+                </div>      
+       </div>     
+    </div>    
+    </div>
+
+    <div class="hotelratings ">
+    
+    <strong class="sf-sub-title">דירוג מלון</strong>
+          <dd>
+            <div class="hotel-allcombo">
+              <OFramework:DropdownList id="Class" listWidth="200px" listHeight="6" tabindex="-1"> <item id="" name="כל"></item> <item id="1" name="1 כוכב או יותר"></item> <item id="2" name="2 כוכבים או יותר"></item> <item id="3" name="3 כוכבים או יותר"></item> <item id="4" name="4 כוכבים או יותר"></item> <item id="5" name="5 כוכבים"></item> </OFramework:DropdownList>
+            </div>
+          </dd>
+      <div class="searchbtn"><a href="javascript:Container.SubmitSearch();" id="SearchButton">חיפוש</a></div>
+    </div>
+    
+  
+  </div>
+</div>

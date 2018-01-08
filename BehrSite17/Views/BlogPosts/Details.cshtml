@@ -1,0 +1,66 @@
+﻿@model BehrSite17.Models.BlogPosts
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BlogPosts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PostTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostTags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostTags)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TitlePic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitlePic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EditDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EditDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

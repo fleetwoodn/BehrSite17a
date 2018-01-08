@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BehrSite17.Models.BlogPosts>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*
+    Comments
+    -on the final, we should remove or modify the edit date
+*@
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+    @using (Html.BeginForm())
+    {
+    <p>
+        Search: @Html.TextBox("SearchString") <br />
+        <input type="submit" value="Filter" />
+    </p>
+    }
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PostTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostAuthor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostTags)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EditDate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostAuthor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostTags)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EditDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Open", "Details", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
